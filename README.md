@@ -1,26 +1,37 @@
 # Slovarik
 
-Slovarik is a personal web app for learning foreign words and practicing translations.
+Slovarik is a personal vocabulary app for learning foreign words and practicing translations.
 
-## MVP Features
+## MVP Requirements
 
-- Add, edit, and delete words and their translations.
-- View and search words in the dictionary.
-- Practice translating words from Russian to English and from English to Russian.
-- Check translation answers.
+1. **Word Input**
+   - Add words through HTTP API and Telegram bot.
+   - Use shared application logic for both interfaces.
 
-The first version supports Russian and English. More languages may be added later.
+2. **AI Word Analysis**
+   - Detect the word's language.
+   - Generate transcription.
+   - Identify word meanings.
+   - Generate translations for each meaning.
+
+3. **Vocabulary Storage**
+   - Store words, meanings, transcriptions, and translations.
+   - Prevent duplicate records.
+   - Maintain data integrity and semantic relationships between words.
+
+4. **Vocabulary Retrieval**
+   - Retrieve saved words with their meanings and translations.
+   - Support language filtering and pagination.
+
+The first version focuses on Russian and English, with support for more languages in the future.
 
 ## Tech Stack
 
-- **Frontend:** React, TypeScript, Vite, Tailwind CSS.
 - **Backend:** Node.js, TypeScript, Fastify.
 - **Database:** PostgreSQL, `pg`, SQL.
+- **AI:** LLM API.
+- **Telegram:** Telegram Bot API.
 - **Monorepo:** pnpm workspaces.
 - **Deployment:** Docker Compose, VPS.
 
-## Project Goals
-
-- Build a useful personal app for learning English words.
-- Learn to develop software with AI coding agents.
-- Gain experience in deploying and managing a web app on a VPS.
+A web interface using React, TypeScript, Vite, and Tailwind CSS is planned for future development.
